@@ -226,7 +226,12 @@ app.get('/logout', function(req, res){
 });
 
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+};
 
-app.listen(3000, function() {
+
+app.listen(port, function() {
   console.log(`Server is running at port 3000`);
 });
