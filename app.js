@@ -30,10 +30,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //////// create user database and connect it to the mongoose database
-mongoose.connect('mongodb://localhost:27017/userDB', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+mongoose.connect('mongodb+srv://admin-reham:Test123@cluster0.r1ewk.mongodb.net/userDB', {useNewUrlParser: true, useUnifiedTopology: true});
 
 ////// create schema of users
 const userSchema = new mongoose.Schema({
